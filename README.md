@@ -22,5 +22,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Third-party libs
 
 For html layout uses Bootstrap
+
 For displaying formatted dates uses [moment for angular 2](https://github.com/urish/angular2-moment)
+
 For some animations uses [animate.css](https://daneden.github.io/animate.css/)
