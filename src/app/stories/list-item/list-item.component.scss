@@ -1,0 +1,21 @@
+@import '../../../styles.scss';
+
+.media {
+    margin-bottom: 10px;
+    background-color: $background-gray;
+    border-radius: 5px;
+    padding: 10px 10px;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($background-gray, 15%);
+        transform: scale(1.02);
+    }
+
+    .media-heading {
+        font-size: 1.4em;
+        i {
+            font-size: 1em;
+        }
+    }
+}

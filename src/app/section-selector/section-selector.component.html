@@ -1,0 +1,7 @@
+<div class="row sections" [hidden]="detailView">
+  <div class="col-xs-1 col-xs-offset-1" *ngFor="let section of sections">
+    <a [routerLink]="['/stories']" 
+       [queryParams]="{ section: section }" 
+       routerLinkActive="active-section" class="text-center">{{section}}</a>
+  </div>
+</div>

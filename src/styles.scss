@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+#main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+}
+
+/** colors **/
+$background-gray: #ccc;
+$link: #777;
+$link-active: #337ab7;

@@ -1,0 +1,20 @@
+@import '../../styles.scss';
+
+.sections {
+    margin-bottom: 50px;
+    a {
+        color: $link;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 2px;
+        display: block;
+        transition: all 0.2 ease;
+        &.active-section {
+            color: $link-active;
+            background-color: #ccc;
+        }
+        &:hover {
+            color: $link-active;
+        }
+    }
+}

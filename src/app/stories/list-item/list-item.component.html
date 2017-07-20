@@ -1,0 +1,11 @@
+  <div class="media" (click)="displayStory()">
+    <div class="media-left">
+      <a href="#" *ngIf="story.imageUrl">
+            <img [src]="story.imageUrl" class="media-object" alt="Sample Image">
+        </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{story.author}} <small><i>Posted on {{story.publishedAt | amDateFormat: 'DD-MM-YYYY HH:mm'}}</i></small></h4>
+      <p>{{story.title}}</p>
+    </div>
+  </div>

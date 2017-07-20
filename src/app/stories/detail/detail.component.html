@@ -1,0 +1,10 @@
+<div class="row animated slideInLeft">
+  <div class="container">
+    <div class="col-xs-12 back-link text-center">
+      <a [routerLink]="['/stories']" 
+         [queryParams]="{ section: section }" 
+         routerLinkActive="active-section" class="button text-center">Back to {{section}}</a>
+    </div>
+    <iframe [src]="trustedUrl" frameborder="0"></iframe>
+  </div>
+</div>
