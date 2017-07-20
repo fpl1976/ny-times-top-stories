@@ -33,6 +33,8 @@ export class ListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.route.queryParamMap.subscribe(map => {
       const section = map.get('section');
+      if (!section)     
+        this.router.navigate(['stories'], { queryParams: { section: 'home' } });
       this.loadStories(section);
     })
   }

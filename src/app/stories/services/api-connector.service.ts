@@ -11,7 +11,6 @@ const API_KEY = '07b5af4f70f44a2d90d3622186b155be';
 const API_URL = 'https://api.nytimes.com/svc/topstories/v2';
 const SECTIONS = ['home', 'opinion', 'world', 'national', 'politics'];
 const DEFAULT_SECTION = SECTIONS[0];
-const DEFAULT_FORMAT = 'json';
 
 @Injectable()
 export class ApiConnectorService {
@@ -44,8 +43,11 @@ export class ApiConnectorService {
   }
 
   /* Returns the list of stories from the api */
-  getStories(section: string = DEFAULT_SECTION): Observable<Story[]> {
-    return this.http.get(`${API_URL}/${section}.${DEFAULT_FORMAT}?api-key=${API_KEY}`)
+  getStories(section: string): Observable<Story[]> {
+    
+    section = section || DEFAULT_SECTION;
+
+    return this.http.get(`${API_URL}/${section}.json?api-key=${API_KEY}`)
       .map(response => response.json().results)
       .map(results => this.mapStories(results))
       .distinctUntilChanged();
